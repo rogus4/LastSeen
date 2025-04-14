@@ -7,7 +7,7 @@ using UnityEngine.Events;
 
 public class TestControler : MonoBehaviour
 {
-     public static event Action<int> cameraChange;
+    //  public static event Action<int> cameraChange;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -24,7 +24,7 @@ public class TestControler : MonoBehaviour
     {
         if (Input.GetKeyDown("space"))
         {
-            cameraChange?.Invoke(11);
+            // cameraChange?.Invoke(11);
             // Debug.Log("entrou");
         }
     }

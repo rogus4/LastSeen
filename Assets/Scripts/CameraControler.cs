@@ -15,12 +15,12 @@ public class CameraControler : MonoBehaviour
 
     void OnEnable()
     {
-        TestControler.cameraChange += onCameraChange;
+        IconController.cameraChange += onCameraChange;
     }
 
     void OnDisable()
     {
-        TestControler.cameraChange -= onCameraChange;
+        IconController.cameraChange -= onCameraChange;
     }
 
     // Update is called once per frame
@@ -31,8 +31,8 @@ public class CameraControler : MonoBehaviour
 
     void onCameraChange(int newPos)
     {
-        Vector3 pos2 = new Vector3(newPos, 0 , 0);
-        transform.position = transform.position + pos2;
+        Vector3 pos2 = new Vector3(newPos, 0 , -10);
+        transform.position = pos2;
         // Debug.Log("action ok " + newPos);
     }
 }
