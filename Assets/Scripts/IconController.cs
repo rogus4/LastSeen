@@ -9,9 +9,11 @@ using UnityEngine.Events;
 public class IconController : MonoBehaviour
 {
     [SerializeField]
-    private int destino;
+    private int destinoX;
+    [SerializeField]
+    private int destinoY;
 
-    public static event Action<int> cameraChange;
+    public static event Action<int, int> cameraChange;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -27,6 +29,6 @@ public class IconController : MonoBehaviour
 
     void OnMouseDown()
     {
-        cameraChange?.Invoke(destino);
+        cameraChange?.Invoke(destinoX, destinoY);
     }
 }

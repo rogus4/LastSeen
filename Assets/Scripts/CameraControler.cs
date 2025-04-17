@@ -29,9 +29,9 @@ public class CameraControler : MonoBehaviour
 
     }
 
-    void onCameraChange(int newPos)
+    void onCameraChange(int newPosX, int newPosY)
     {
-        Vector3 pos2 = new Vector3(newPos, 0 , -10);
+        Vector3 pos2 = new Vector3(newPosX, newPosY , -10);
         transform.position = pos2;
         // Debug.Log("action ok " + newPos);
     }
