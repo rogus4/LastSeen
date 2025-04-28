@@ -16,11 +16,13 @@ public class CameraControler : MonoBehaviour
     void OnEnable()
     {
         IconController.cameraChange += onCameraChange;
+        ReturnController.cameraChange2 += onCameraChange;
     }
 
     void OnDisable()
     {
         IconController.cameraChange -= onCameraChange;
+        ReturnController.cameraChange2 -= onCameraChange;
     }
 
     // Update is called once per frame
